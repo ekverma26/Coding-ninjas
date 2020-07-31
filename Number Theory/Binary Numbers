@@ -1,0 +1,30 @@
+Calculate and return number of 1s in binary representation of given number n.
+Input format :
+Integer n
+Output Format :
+In one line print the total number of 1s which satisfy above description
+Constraints :
+1 <= n <= 2^63 - 1
+Sample Input :
+ 4
+Sample Output :
+ 1
+Sample Input Explanation :
+4 can be represented as 100 in binary, which has only one 1 in binary representation.
+
+
+Solution:-
+## Read input as specified in the question.
+## Print output as specified in the question.
+def b(x):
+    global c
+    if x>1:
+        b(x//2)
+    a=x%2
+    if a==1:
+         c=c+1
+
+c=0
+n=int(input())
+b(n)
+print(c)
